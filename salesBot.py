@@ -109,7 +109,7 @@ class openseaSalesBot():
         return json_list
 
     def sendWebhook(self, sale_json):
-        discord_webhook = 'https://discord.com/api/webhooks/841773203738853427/RVNdCYtG0dM53YIb2-xaq_GyTrDEQpHFy6MVCrueNXaBBtanHNrMiBlbK1Low2njuXJ3' # Enter the discord webhook
+        discord_webhook = '' # Enter the discord webhook
 
         asset_info = sale_json['asset_info']
         seller_info = sale_json['seller_info']
@@ -208,12 +208,10 @@ class openseaSalesBot():
                             except Exception as e:
                                 print(f'Error: {e}') 
 
-                            """
                             try:
                                 tweetBot.tweetSale(api, sale_data)
                             except Exception as e:
                                 print(f'Error: {e}')
-                            """
                             break
             else:
                 print(f'[{current_time}] No new sales!')
